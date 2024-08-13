@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* chỉnh cho body cả trang ấy */
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* chinh background */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(/picture/dong.png) no-repeat center/cover;
+}
+/* chỉnh cho khung thời tiết */
+#weather {
+  width: 350px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  background: url(/picture/dong.png) no-repeat center/cover;
+}
+/* đổi màu ảnh theo màu nhiệt độ */
+/* cài các lớp bg bao giờ gọi thì hiển thị */
+.hot {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(/picture/ha.png) no-repeat center/cover;
+}
+.hot #weather {
+  background: url(/picture/ha.png) no-repeat center/cover;
+}
+
+.cold {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(/picture/dong.png) no-repeat center/cover;
+}
+.cold #weather {
+  background: url(/picture/dong.png) no-repeat center/cover;
+}
+.warm {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(/picture/thu.png) no-repeat center/cover;
+}
+.warm #weather {
+  background: url(/picture/thu.png) no-repeat center/cover;
+}
+
+/* chỉnh cho ô tìm kiếm */
+.search {
+  /* chỉnh kthuc cho ô */
+  width: 100%;
+  /* căn chỉnh pading */
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  /* tạo background cho ô tk */
+  background: rgba(255, 255, 255, 0.3);
+  /* bo cho ô tìm kiếm */
+  border-radius: 0 15px 0 15px;
+  /* đổ bóng cho ô tìm kiếm */
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+  font-size: 19px;
+}
+.search:focus {
+  background: rgba(255, 255, 255, 0.7);
+  /* bo cho ô tìm kiếm */
+  border-radius: 15px 0 15px 0;
+  /* đổ bóng cho ô tìm kiếm */
+}
+.content {
+  text-align: center;
+  margin: 40px 0px;
+  color: white;
+}
+.capital {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.time {
+  margin: 15px 0 20px 0;
+}
+.temperature {
+  font-size: 60px;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+  /* viền */
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: none;
+  margin: 20px;
+  padding: 12px;
+}
+.short-desc {
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+.more-desc {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.more-desc div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.more-desc div i {
+  margin: 5px 0;
+}
+.content {
+  text-align: center;
+  color: white;
+  margin: 40px 0;
+  transition: 0.4s;
+}
+/* ẩn khi thêm lớp này vào phần nào thì phần đó bị ẩn  */
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
